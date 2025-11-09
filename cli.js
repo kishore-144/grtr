@@ -12,7 +12,7 @@ const program = new Command();
 program
   .name("grtr")
   .description("Instant file/folder transfer CLI using nicknames")
-  .version("1.0.0");
+  .version("1.0.52");
 
 program
   .command("serve <nickname>")
@@ -23,9 +23,9 @@ program
 
 
 program
-  .command("send <nickname> <path>")
+  .command("send <nickname> <path> <medium>")
   .description("Send file/folder to nickname")
-  .action((nickname, path) => {
+  .action((nickname, path, medium) => {
     sendFile(nickname, path);
   });
 
