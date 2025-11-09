@@ -78,12 +78,17 @@ grtr serve mypc "D:\Received"
 
 ### 🟡 Send Files or Folders
 ```bash
-grtr send <nickname> <path>
+grtr send <nickname> <path> <mode>
 ```
 
 Examples:
 ```bash
-grtr send mypc ./report.pdf
+grtr send mypc ./report.pdf lan
+grtr send mypc "C:\Users\KISHORE B\Desktop\Project Folder"
+```
+or
+```bash
+grtr send mypc ./report.pdf wan
 grtr send mypc "C:\Users\KISHORE B\Desktop\Project Folder"
 ```
 
