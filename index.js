@@ -9,19 +9,19 @@ import { registerNickname, getNicknameIP } from "./core/nickname.js";
 
 // Export key functions for external use
 export {
-  startServer,
-  sendFile,
-  receiveFile,
-  setMode,
-  getMode,
-  setAPI,
-  getConfig,
-  registerNickname,
-  getNicknameIP,
+    startServer,
+    sendFile,
+    receiveFile,
+    setMode,
+    getMode,
+    setAPI,
+    getConfig,
+    registerNickname,
+    getNicknameIP,
 };
 
 if (process.argv[1].endsWith("index.js")) {
-  console.log(`
+    console.log(`
 grtr - Quick file/folder transfer tool
 --------------------------------------
 Commands:

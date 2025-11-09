@@ -10,48 +10,47 @@ import { registerNickname, getNicknameIP } from "./core/nickname.js";
 
 const program = new Command();
 program
-  .name("grtr")
-  .description("Instant file/folder transfer CLI using nicknames")
-  .version("1.0.52");
+    .name("grtr")
+    .description("Instant file/folder transfer CLI using nicknames")
+    .version("1.0.52");
 
 program
-  .command("serve <nickname>")
-  .description("Serve your device under a nickname")
-  .action((nickname) => {
-    startServer(nickname);
-  });
-
+    .command("serve <nickname>")
+    .description("Serve your device under a nickname")
+    .action((nickname) => {
+        startServer(nickname);
+    });
 
 program
-  .command("send <nickname> <path> <medium>")
-  .description("Send file/folder to nickname")
-  .action((nickname, path, medium) => {
-    sendFile(nickname, path);
-  });
+    .command("send <nickname> <path> <medium>")
+    .description("Send file/folder to nickname")
+    .action((nickname, path, medium) => {
+        sendFile(nickname, path);
+    });
 
 // Receive file
 program
-  .command("receive <nickname>")
-  .description("Receive file/folder from nickname")
-  .action((nickname) => {
-    receiveFile(nickname);
-  });
+    .command("receive <nickname>")
+    .description("Receive file/folder from nickname")
+    .action((nickname) => {
+        receiveFile(nickname);
+    });
 
 // Change mode
 program
-  .command("mode <type>")
-  .description("Switch between LAN or WAN mode")
-  .action((type) => {
-    setMode(type);
-    console.log(chalk.green(`Mode set to: ${type}`));
-  });
+    .command("mode <type>")
+    .description("Switch between LAN or WAN mode")
+    .action((type) => {
+        setMode(type);
+        console.log(chalk.green(`Mode set to: ${type}`));
+    });
 
 // Register nickname manually
 program
-  .command("newapi <url>")
-  .description("Register new relay/relay API base URL")
-  .action((url) => {
-    registerNickname(url);
-  });
+    .command("newapi <url>")
+    .description("Register new relay/relay API base URL")
+    .action((url) => {
+        registerNickname(url);
+    });
 
 program.parse(process.argv);

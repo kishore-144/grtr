@@ -29,8 +29,8 @@ Designed for **developers, IT teams, and local networks**, it’s like “AirDro
 ✅ **Nickname-based system** — `grtr send mypc ./docs`  
 ✅ **Auto-zip for folders** — sends entire directories easily  
 ✅ **Simple, scriptable CLI** — perfect for dev workflows  
-✅ **Configurable WAN mode** *(coming soon)* for global sharing  
-✅ **Cross-platform** — works on Windows, macOS, and Linux  
+✅ **Configurable WAN mode** _(coming soon)_ for global sharing  
+✅ **Cross-platform** — works on Windows, macOS, and Linux
 
 ---
 
@@ -51,6 +51,7 @@ npm link
 ```
 
 Then test:
+
 ```bash
 grtr --help
 ```
@@ -60,16 +61,19 @@ grtr --help
 ## 🖥️ Usage Guide
 
 ### 🟢 Start the Receiver (Server)
+
 ```bash
 grtr serve <nickname>
 ```
 
 Example:
+
 ```bash
 grtr serve mypc
 ```
 
 Optionally specify a custom folder to save received files:
+
 ```bash
 grtr serve mypc "D:\Received"
 ```
@@ -77,16 +81,20 @@ grtr serve mypc "D:\Received"
 ---
 
 ### 🟡 Send Files or Folders
+
 ```bash
 grtr send <nickname> <path> <mode>
 ```
 
 Examples:
+
 ```bash
 grtr send mypc ./report.pdf lan
 grtr send mypc "C:\Users\KISHORE B\Desktop\Project Folder"
 ```
+
 or
+
 ```bash
 grtr send mypc ./report.pdf wan
 grtr send mypc "C:\Users\KISHORE B\Desktop\Project Folder"
@@ -97,18 +105,23 @@ grtr send mypc "C:\Users\KISHORE B\Desktop\Project Folder"
 ---
 
 ### 🟣 Receive Mode (Manual)
+
 ```bash
 grtr receive <nickname>
 ```
+
 Displays listening status and helps users verify setup.
 
 ---
 
 ### 🔄 Switch Between LAN and WAN
+
 ```bash
 grtr mode <type>
 ```
+
 Examples:
+
 ```bash
 grtr mode lan
 grtr mode wan
@@ -117,11 +130,13 @@ grtr mode wan
 ---
 
 ### 🌐 Set Custom Relay API (for WAN transfers)
+
 ```bash
 grtr newapi <url>
 ```
 
 Example:
+
 ```bash
 grtr newapi https://relay.grtr.io
 ```
@@ -131,11 +146,13 @@ grtr newapi https://relay.grtr.io
 ## 🧰 Configuration
 
 All configurations are stored locally in:
+
 ```
 ~/.grtr.json
 ```
 
 Nickname mappings:
+
 ```
 ~/.grtr-nicknames.json
 ```
@@ -147,26 +164,33 @@ Each nickname maps to its current LAN IP, updated automatically when you run `se
 ## ⚡ Example Workflow
 
 **Device A (Receiver):**
+
 ```bash
 grtr serve laptop
 ```
+
 Output:
+
 ```
 Registered nickname laptop at 192.168.1.10
 Serving as 'laptop' on port 5050
 ```
 
 **Device B (Sender):**
+
 ```bash
 grtr send laptop ./files/test.txt
 ```
+
 Output:
+
 ```
 Sending test.txt to laptop (192.168.1.10)...
 Transfer complete!
 ```
 
 Receiver sees:
+
 ```
 Received: test.txt
 ```
@@ -205,6 +229,7 @@ grtr/
 ## 🛠️ Development Setup
 
 Clone the repo and link it globally:
+
 ```bash
 git clone https://github.com/kishore-144/grtr.git
 cd grtr
@@ -213,11 +238,13 @@ npm link
 ```
 
 Run locally:
+
 ```bash
 node cli.js serve mypc
 ```
 
 Unlink when done:
+
 ```bash
 npm unlink -g grtr
 ```
@@ -227,6 +254,7 @@ npm unlink -g grtr
 ## 🔒 Firewall & Connectivity Notes
 
 If transfers fail with `ECONNREFUSED`, check:
+
 - Receiver is running (`grtr serve`)
 - Both devices are on same LAN
 - Windows Firewall allows **Node.js** inbound connections
@@ -235,9 +263,9 @@ If transfers fail with `ECONNREFUSED`, check:
 
 ## 🚧 Upcoming Features
 
-- 🌍 **WAN Relay Mode** — send files globally using WebSocket signaling  
-- 📦 **Auto-Unzip on Receive**  
-- 🔁 **Progress bars and speed metrics**  
+- 🌍 **WAN Relay Mode** — send files globally using WebSocket signaling
+- 📦 **Auto-Unzip on Receive**
+- 🔁 **Progress bars and speed metrics**
 - 🔐 **Optional encrypted transfer mode**
 
 ---
