@@ -1,27 +1,36 @@
 {
-  "name": "grtr",
-  "version": "1.0.0",
-  "description": "Instant file transfer with Nicknames, No more IPs and SCPs",
-  "main": "index.js",
-  "bin": {
-    "grtr": "./cli.js"
-  },
-  "keywords": ["file-transfer", "cli", "p2p", "network", "lan"],
-  "author": "Kishore kishoreb2253@gmail.com thekishore.in",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/kishore-144/grtr.git"
-  },
-  "dependencies": {
-    "archiver": "^5.3.2",
-    "axios": "^1.6.2",
-    "chalk": "^5.3.0",
-    "commander": "^11.1.0",
-    "express": "^4.19.2",
-    "extract-zip": "^2.0.1",
-    "multer": "^2.0.2",
-    "ws": "^8.17.0"
-  },
-  "type": "module"
+    "name": "grtr",
+    "version": "1.0.0",
+    "description": "Instant file transfer with Nicknames, No more IPs and SCPs",
+    "main": "index.js",
+    "bin": {
+        "grtr": "./cli.js"
+    },
+    "keywords": [
+        "file-transfer",
+        "cli",
+        "p2p",
+        "network",
+        "lan"
+    ],
+    "author": "Kishore kishoreb2253@gmail.com thekishore.in",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kishore-144/grtr.git"
+    },
+    "dependencies": {
+        "archiver": "^5.3.2",
+        "axios": "^1.6.2",
+        "chalk": "^5.3.0",
+        "commander": "^11.1.0",
+        "express": "^4.19.2",
+        "extract-zip": "^2.0.1",
+        "multer": "^2.0.2",
+        "ws": "^8.17.0"
+    },
+    "type": "module",
+    "devDependencies": {
+        "prettier": "^3.6.2"
+    }
 }
