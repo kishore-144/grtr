@@ -1,6 +1,6 @@
 {
     "name": "grtr",
-    "version": "1.0.1",
+    "version": "2.0.0",
     "description": "Instant file transfer with Nicknames, No more IPs and SCPs",
     "main": "index.js",
     "bin": {
