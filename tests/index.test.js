@@ -49,7 +49,7 @@ describe("index.js CLI help", () => {
     });
 
     // Test Case: 2
-    it("prints help when called directly", async () => {
+    it("does not print help when called with a wrong path", async () => {
         // Set mock data, mock method
         process.argv = ["/usr/bin/node", "/mock/yada yada"];
         const consoleSpy = vi
