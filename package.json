@@ -2,7 +2,7 @@
     "name": "grtr",
     "version": "1.0.0",
     "description": "Instant file transfer with Nicknames, No more IPs and SCPs",
-    "main": "index.js",
+    "main": "src/index.js",
     "scripts": {
         "test": "vitest",
         "coverage": "vitest run --coverage"

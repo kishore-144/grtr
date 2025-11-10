@@ -20,6 +20,7 @@ export {
     getNicknameIP,
 };
 
+// Entry point when called directly
 if (process.argv[1].endsWith("index.js")) {
     console.log(`
 grtr - Quick file/folder transfer tool
