@@ -4,7 +4,8 @@
     "description": "Instant file transfer with Nicknames, No more IPs and SCPs",
     "main": "src/index.js",
     "scripts": {
-        "test": "vitest",
+        "tests": "vitest",
+        "tests-ci": "vitest --run",
         "coverage": "vitest run --coverage"
     },
     "bin": {
