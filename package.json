@@ -2,7 +2,11 @@
     "name": "grtr",
     "version": "2.0.1",
     "description": "Instant file transfer with Nicknames, No more IPs and SCPs",
-    "main": "index.js",
+    "main": "src/index.js",
+    "scripts": {
+        "test": "vitest",
+        "coverage": "vitest run --coverage"
+    },
     "bin": {
         "grtr": "./cli.js"
     },
@@ -31,6 +35,8 @@
     },
     "type": "module",
     "devDependencies": {
-        "prettier": "^3.6.2"
+        "@vitest/coverage-v8": "^4.0.8",
+        "prettier": "^3.6.2",
+        "vitest": "^4.0.8"
     }
 }
