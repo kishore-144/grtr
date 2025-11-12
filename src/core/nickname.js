@@ -1,7 +1,6 @@
 import os from "os";
 import fs from "fs";
 import path from "path";
-import { getConfig } from "./config.js";
 
 const nickPath = path.join(
     process.env.HOME || process.env.USERPROFILE,
