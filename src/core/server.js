@@ -2,7 +2,6 @@ import express from "express";
 import fs from "fs";
 import path from "path";
 import chalk from "chalk";
-import os from "os";
 import multer from "multer";
 import { registerNickname } from "./nickname.js";
 
@@ -35,8 +34,10 @@ export function startServer(nickname) {
         });
     });
 
-    app.listen(port, "0.0.0.0", () => {
+    const server = app.listen(port, "0.0.0.0", () => {
         registerNickname(nickname);
         console.log(chalk.cyan(`🌐 Serving as '${nickname}' on port ${port}`));
     });
+
+    return { app, server };
 }
