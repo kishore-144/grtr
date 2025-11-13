@@ -38,7 +38,7 @@ describe("index.js CLI help", () => {
         process.argv = ["/usr/bin/node", "/mock/index.js"];
         const consoleSpy = vi
             .spyOn(console, "log")
-            .mockImplementation(() => { });
+            .mockImplementation(() => {});
 
         await import("../src/index.js");
 
@@ -54,7 +54,7 @@ describe("index.js CLI help", () => {
         process.argv = ["/usr/bin/node", "/mock/yada yada"];
         const consoleSpy = vi
             .spyOn(console, "log")
-            .mockImplementation(() => { });
+            .mockImplementation(() => {});
 
         await import("../src/index.js");
 
