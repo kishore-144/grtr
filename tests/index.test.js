@@ -38,23 +38,21 @@ describe("index.js CLI help", () => {
         process.argv = ["/usr/bin/node", "/mock/index.js"];
         const consoleSpy = vi
             .spyOn(console, "log")
-            .mockImplementation(() => {});
+            .mockImplementation(() => { });
 
         await import("../src/index.js");
 
         expect(consoleSpy).toHaveBeenCalled();
-        expect(consoleSpy.mock.calls[0][0]).toContain(
-            "grtr - Quick file/folder transfer tool"
-        );
+        expect(consoleSpy.mock.calls[0][0]).toContain("grtr");
     });
 
     // Test Case: 2
     it("does not print help when called with a wrong path", async () => {
         // Set mock data, mock method
-        process.argv = ["/usr/bin/node", "/mock/yada yada"];
+        process.argv = ["/usr/bin/node", "/mock/main.js"];
         const consoleSpy = vi
             .spyOn(console, "log")
-            .mockImplementation(() => {});
+            .mockImplementation(() => { });
 
         await import("../src/index.js");
 

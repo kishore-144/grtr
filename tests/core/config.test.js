@@ -1,6 +1,6 @@
 // config.test.js
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import fs, { existsSync, readFileSync, writeFileSync } from "fs";
+import fs from "fs";
 import path from "path";
 
 let configModule;

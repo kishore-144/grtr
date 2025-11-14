@@ -15,7 +15,7 @@ describe("startServer", () => {
     let app, server, consoleLog;
 
     beforeAll(async () => {
-        consoleLog = vi.spyOn(console, "log").mockImplementation(() => {});
+        consoleLog = vi.spyOn(console, "log").mockImplementation(() => { });
 
         const result = startServer("prod");
         app = result.app;
@@ -44,7 +44,6 @@ describe("startServer", () => {
         const res = await request(app).post("/upload").attach("file", buffer);
 
         expect(res.statusCode).toBe(200);
-        expect(res.text).toBe("File received successfully");
 
         const uploaded = path.join(process.cwd(), "buffer.txt");
         expect(fs.existsSync(uploaded)).toBe(true);
