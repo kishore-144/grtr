@@ -15,7 +15,7 @@ describe("startServer", () => {
     let app, server, consoleLog;
 
     beforeAll(async () => {
-        consoleLog = vi.spyOn(console, "log").mockImplementation(() => { });
+        consoleLog = vi.spyOn(console, "log").mockImplementation(() => {});
 
         const result = startServer("prod");
         app = result.app;

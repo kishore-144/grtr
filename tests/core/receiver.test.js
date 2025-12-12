@@ -5,7 +5,7 @@ describe("receiveFile", () => {
     let consoleLog;
 
     beforeEach(() => {
-        consoleLog = vi.spyOn(console, "log").mockImplementation(() => { });
+        consoleLog = vi.spyOn(console, "log").mockImplementation(() => {});
     });
 
     afterEach(() => {
